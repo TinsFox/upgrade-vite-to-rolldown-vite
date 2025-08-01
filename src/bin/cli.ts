@@ -7,20 +7,18 @@ const program = new Command();
 
 program
   .name('vite-rolldown-upgrade')
-  .description('Upgrade your Vite project to use rolldown-vite')
-  .option('-s, --skip-install', 'Skip dependency installation')
-  .option('-p, --path <path>', 'Project path', process.cwd())
+  .description('将 Vite 项目升级到 rolldown-vite')
+  .option('-s, --skip-install', '跳过依赖安装')
+  .option('-p, --path <path>', '项目路径', process.cwd())
+  .option('-b, --skip-build', '跳过构建步骤')
   .action(async (options) => {
     try {
-      console.log(chalk.blue('Starting upgrade to rolldown-vite...'));
-
       await upgrade(options.path, {
         skipInstall: options.skipInstall,
+        skipBuild: options.skipBuild,
       });
-
-      console.log(chalk.green('\n✨ Upgrade completed successfully!'));
     } catch (error) {
-      console.error(chalk.red('\n❌ Upgrade failed:'), error);
+      console.error(chalk.red('\n❌ 升级失败：'), error);
       process.exit(1);
     }
   });

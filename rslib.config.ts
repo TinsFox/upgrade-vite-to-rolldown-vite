@@ -14,9 +14,9 @@ export default defineConfig({
       format: 'esm',
       bundle: true,
       dts: true,
-      banner: {
-        js: '#!/usr/bin/env node',
-      },
+      // banner: {
+      //   js: '#!/usr/bin/env node',
+      // },
       output: {
         target: 'node',
         distPath: {
