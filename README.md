@@ -11,6 +11,12 @@
 
 ## 安装
 
+如果你不想全局安装，也可以使用 pnpm dlx 临时执行：
+
+```bash
+pnpm dlx upgrade-vite-to-rolldown-vite
+```
+
 ```bash
 # 使用 npm
 npm install -g vite-rolldown-upgrade
