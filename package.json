@@ -1,6 +1,6 @@
 {
   "name": "upgrade-vite-to-rolldown-vite",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "type": "module",
   "bin": {
     "vite-rolldown-upgrade": "./dist/bin/cli.js"
