@@ -27,7 +27,8 @@
     "format": "prettier --write .",
     "lint": "eslint .",
     "test": "vitest run",
-    "release": "release-it"
+    "release": "release-it",
+    "prepublishOnly": "pnpm run build"
   },
   "devDependencies": {
     "@eslint/js": "^9.30.0",
@@ -42,7 +43,6 @@
     "typescript-eslint": "^8.35.1",
     "vitest": "^3.2.4"
   },
-  "private": true,
   "packageManager": "pnpm@9.15.9+sha512.68046141893c66fad01c079231128e9afb89ef87e2691d69e4d40eee228988295fd4682181bae55b58418c3a253bde65a505ec7c5f9403ece5cc3cd37dcf2531",
   "dependencies": {
     "chalk": "^5.4.1",
